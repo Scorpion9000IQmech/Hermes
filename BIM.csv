@@ -1,10 +1,9 @@
 Parts,COST,LINK
--------,------,------
-Buzzers 10 peice,1.58 USD,[AliExpress](https://ar.aliexpress.com/item/1005008165091345.html?spm=a2g0o.productlist.main.8.3c86xKOixKOitP&aem_p4p_detail=202604270416102094164706196300001174606&algo_pvid=e2f0ab90-6a1b-48cf-8a82-a7af61c8c830&algo_exp_id=e2f0ab90-6a1b-48cf-8a82-a7af61c8c830-7&pdp_ext_f=%7B"order"%3A"139"%2C"spu_best_type"%3A"price"%2C"eval"%3A"1"%2C"fromPage"%3A"search"%7D&pdp_npi=6%40dis%21USD%211.58%211.58%21%21%2110.75%2110.75%21%402140ec5d17772885701743231ef38d%2112000044055302230%21sea%21OM%216453760668%21X%211%210%21n_tag%3A-29911%3Bd%3A4b15dde3%3Bm03_new_user%3A-29895&curPageLogUid=FBDDN1ZaPHbf&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008165091345%7C_p_origin_prod%3A&search_p4p_id=202604270416102094164706196300001174606_2)
-XIAO RP2040,6.31 USD,[AliExpress](https://ar.aliexpress.com/item/1005006593701624.html?spm=a2g0o.productlist.main.1.594e72a0k3wotb&algo_pvid=3994ba39-1c0d-4fbb-9548-68c0d8941582&algo_exp_id=3994ba39-1c0d-4fbb-9548-68c0d8941582-0&pdp_ext_f=%7B"order"%3A"447"%2C"eval"%3A"1"%2C"fromPage"%3A"search"%7D&pdp_npi=6%40dis%21USD%216.31%214.67%21%21%216.31%214.67%21%402140ec5d17772896468825754ef38f%2112000039072595754%21sea%21OM%216453760668%21X%211%210%21n_tag%3A-29911%3Bd%3A4b15dde3%3Bm03_new_user%3A-29895&curPageLogUid=k188lO9MGhtl&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006593701624%7C_p_origin_prod%3A)
-LED,---,from my personal electronics kit, already had some
-Resistors,---,also from my own kit
-Capacitors,---,I have capacitors in my kit
-connectors 0*8,---,available in my kit
-connectors 0*4,---,also available in my kit
-VCNL36828P,$2.43 USD,[JLPCB](https://jlcpcb.com/partdetail/VishayIntertech-VCNL36828P/C19183990)
+Buzzers 10 piece,1.58 USD,https://ar.aliexpress.com/item/1005008165091345.html
+XIAO RP2040,6.31 USD,https://ar.aliexpress.com/item/1005006593701624.html
+LED,Already owned,From personal electronics kit
+Resistors,Already owned,From personal electronics kit
+Capacitors,Already owned,From personal electronics kit
+Connectors 1x8,Already owned,Available in personal kit
+Connectors 1x4,Already owned,Available in personal kit
+VCNL36828P,2.43 USD,https://jlcpcb.com/partdetail/VishayIntertech-VCNL36828P/C19183990
