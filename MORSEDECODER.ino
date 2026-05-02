@@ -1,10 +1,12 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7735.h>
 #include <SPI.h>
+#include <Wire.h>
 
 #define TFT_CS   D6
 #define TFT_DC   D7
 #define TFT_RST  D9
+#define VCNL_ADDR 0x60
 
 Adafruit_ST7735 ROSE = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
@@ -15,9 +17,9 @@ unsigned long startTime = 0;
 unsigned long duration = 0;
 unsigned long lastInputTime = 0;
 
-int sensorPin = D0;
 int buzzerPin = D1;
 int ledPin = D2;
+int sensorPin = D0; 
 
 String currentLetter = "";
 String decodedMessage = "";
@@ -59,19 +61,26 @@ char decodeMorse(String code)
 
 bool sensorReading()
 {
-    if (digitalRead(sensorPin) == HIGH) //depends on sensor, testing needed high or low
-        return true;
-    else
-        return false;
+    return digitalRead(sensorPin) == LOW;
+}
+
+void initSensor()
+{
+    Wire.beginTransmission(VCNL_ADDR);
+    Wire.write(0x00);
+    Wire.write(0x01); 
+    Wire.endTransmission();
 }
 
 void setup() {
     lastInputTime = millis();
-    pinMode(sensorPin, INPUT);
+    pinMode(sensorPin, INPUT_PULLUP);
     pinMode(buzzerPin, OUTPUT);
     pinMode(ledPin, OUTPUT);
 
     Serial.begin(115200);
+    Wire.begin();
+    initSensor();
     
     ROSE.initR(INITR_BLACKTAB);
     ROSE.setRotation(1);
@@ -145,9 +154,9 @@ void loop()
 
         ROSE.fillScreen(ST77XX_BLACK);
         ROSE.setCursor(0,0);
-        ROSE.print("message: " + decodedMessage);
+        ROSE.print(decodedMessage);
         ROSE.setCursor(0,40);
-        ROSE.print("Morse: " + fullMorse);
+        ROSE.print(fullMorse);
 
         replayMorseLED();
 
@@ -175,7 +184,7 @@ void playSong() // rn its just buzzer sounds, I will replace this with library p
     tone(buzzerPin, 392, 400);
     delay(450);
     noTone(buzzerPin);
-    setCursor(0,60);
+    ROSE.setCursor(0,60);
     ROSE.println("playing melody");
 }
 
